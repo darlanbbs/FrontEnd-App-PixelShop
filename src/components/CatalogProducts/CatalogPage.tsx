@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import ProductCard from "./../cards/ProductCard";
 import { listarProdutos } from "@/db/db";
+import Header from "../header/Header";
 
 const CatalogPage = () => {
   interface Product {
@@ -31,7 +32,7 @@ const CatalogPage = () => {
 
   return (
     <Container>
-      <h1>Catálogo de Produtos</h1>
+      <Header />
       <Row>
         {products.map((product) => (
           <Col md={6} lg={4} key={product.id} className="mb-4">

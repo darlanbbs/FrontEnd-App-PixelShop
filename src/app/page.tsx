@@ -1,11 +1,12 @@
 import CatalogPage from "@/components/CatalogProducts/CatalogPage";
+import CatalogProductsArea from "@/components/CatalogProductsArea/CatalogProductsArea";
 
 export default function Home() {
   return (
     <main>
-      <h1>
+      <CatalogProductsArea>
         <CatalogPage />
-      </h1>
+      </CatalogProductsArea>
     </main>
   );
 }
