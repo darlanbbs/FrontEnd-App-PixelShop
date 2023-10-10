@@ -1,13 +1,4 @@
-interface Product {
-  nome: string;
-  preco: number;
-  quantidade_estoque: number;
-  descricao?: string;
-}
-
-interface ProductCardProps extends Product {
-  onDetalhesClick: () => void;
-}
+import { ProductCardProps } from "../Interfaces/Interfaces";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   nome,

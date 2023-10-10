@@ -4,17 +4,10 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./../cards/ProductCard";
 import { listarProdutos } from "@/db/db";
 import Header from "../header/Header";
+import { CatalogPageProps } from "../Interfaces/Interfaces";
 
 const CatalogPage = () => {
-  interface Product {
-    id: number;
-    nome: string;
-    preco: number;
-    quantidade_estoque: number;
-    descricao?: string;
-  }
-
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<CatalogPageProps[]>([]);
 
   useEffect(() => {
     listarProdutos()
