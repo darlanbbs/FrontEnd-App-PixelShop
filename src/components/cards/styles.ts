@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BsFillTrashFill } from "react-icons/bs";
 
 export const CardWrapper = styled.div`
   border: 1px solid #ccc;
@@ -7,21 +6,6 @@ export const CardWrapper = styled.div`
   padding: 10px;
   margin: 10px;
   position: relative;
-`;
-
-export const TrashIcon = styled(BsFillTrashFill)`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: red;
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:focus {
-    outline: none;
-  }
 `;
 
 export const Title = styled.h3`

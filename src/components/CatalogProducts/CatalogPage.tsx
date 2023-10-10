@@ -2,7 +2,7 @@
 import { Container, Row, Col } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import ProductCard from "./../cards/ProductCard";
-import { listarProdutos, criarProduto } from "@/db/db";
+import { listarProdutos, criarProduto, deletarProduto } from "@/db/db";
 import Header from "../header/Header";
 import { CatalogPageProps } from "../Interfaces/Interfaces";
 import { useRouter } from "next/navigation";
@@ -42,6 +42,7 @@ const CatalogPage = () => {
               descricao={product.descricao}
               onDetalhesClick={() => handleDetalhesClick(product.id)}
               onEditClick={() => handleEditClick(product.id)}
+              onDeleteClick={() => deletarProduto(product.id)}
             />
           </Col>
         ))}

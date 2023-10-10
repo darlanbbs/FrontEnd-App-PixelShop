@@ -40,3 +40,14 @@ export const criarProduto = async (
     return undefined;
   }
 };
+
+export const deletarProduto = async (id: number): Promise<void> => {
+  try {
+    await api.delete(`/produto/${id}`);
+  } catch (error) {
+    console.error(`Erro ao deletar produto ${id}:`, error);
+    throw error;
+  }
+};
+
+export const editarProduto = async () => {};

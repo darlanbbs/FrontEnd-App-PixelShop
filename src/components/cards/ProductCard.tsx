@@ -1,8 +1,9 @@
+import { deletarProduto } from "@/db/db";
 import DefaultButton from "../Buttons/DefaultButton/DefaultButton";
+import DeleteButton from "../Buttons/deleteButton/DeleteButton";
 import { ProductCardProps } from "../Interfaces/Interfaces";
 import {
   CardWrapper,
-  TrashIcon,
   Title,
   Price,
   Stock,
@@ -17,10 +18,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
   descricao,
   onDetalhesClick,
   onEditClick,
+  onDeleteClick,
 }) => {
   return (
     <CardWrapper>
-      <TrashIcon onClick={() => console.log("Lixeira clicada")} />
+      <DeleteButton onClick={onDeleteClick} />
       <Title>{nome}</Title>
       <Price>Preço: R${preco}</Price>
       <Stock>Quantidade em Estoque: {quantidade_estoque}</Stock>

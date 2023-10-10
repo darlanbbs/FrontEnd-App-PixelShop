@@ -8,10 +8,12 @@ export interface Product {
 export interface ProductCardProps extends Product {
   onDetalhesClick: () => void;
   onEditClick: () => void;
+  onDeleteClick: () => void;
 }
 
 export interface CatalogPageProps extends Product {
   id: number;
   handleDetalhesClick: (id: number) => void;
+  handleDeleteClick: (id: number) => void;
   handleEditClick: (id: number) => void;
 }
