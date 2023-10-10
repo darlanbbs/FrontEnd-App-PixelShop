@@ -2,7 +2,7 @@
 import { Container, Row, Col } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import ProductCard from "./../cards/ProductCard";
-import { listarProdutos } from "@/db/db";
+import { listarProdutos, criarProduto } from "@/db/db";
 import Header from "../header/Header";
 import { CatalogPageProps } from "../Interfaces/Interfaces";
 import { useRouter } from "next/navigation";
@@ -19,8 +19,9 @@ const CatalogPage = () => {
       .catch((error) => {
         console.error("Erro ao obter produtos:", error);
       });
-  }, []);
-  console.log(products);
+  }, [criarProduto]);
+  criarProduto("aaaaaaaa", 1, 1);
+
   const handleDetalhesClick = (id: number) => {
     router.push(`/product/${id}`);
   };
