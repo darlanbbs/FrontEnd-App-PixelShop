@@ -3,6 +3,7 @@ import React from "react";
 import { Container } from "reactstrap";
 import Button from "../Buttons/AddButton/Button";
 import { HeaderWrapper, Title } from "./styles";
+import ModalCriarProduto from "../Modals/ModalCriarProduto/ModalCriarProduto";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
       <Container fluid>
         <Title>Catálogo de Produtos</Title>
       </Container>
-      <Button />
+      <ModalCriarProduto />
     </HeaderWrapper>
   );
 };

@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 type props = {
   title: string;
-  onClick: any;
+  onClick?: any;
+  type?: string;
 };
 const DetailsButton = styled.button`
   background-color: #007bff;
@@ -13,8 +14,12 @@ const DetailsButton = styled.button`
   cursor: pointer;
 `;
 
-const DefaultButton = ({ title, onClick }: props) => {
-  return <DetailsButton onClick={onClick}>{title}</DetailsButton>;
+const DefaultButton = ({ title, onClick, type }: props) => {
+  return (
+    <DetailsButton type={type} onClick={onClick}>
+      {title}
+    </DetailsButton>
+  );
 };
 
 export default DefaultButton;

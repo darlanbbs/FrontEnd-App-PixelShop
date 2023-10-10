@@ -2,10 +2,12 @@
 import React from "react";
 import { AddButton } from "./style";
 
-type Props = {};
+type Props = {
+  onClick: () => void;
+};
 
-const Button = (props: Props) => {
-  return <AddButton>+</AddButton>;
+const Button = ({ onClick }: Props) => {
+  return <AddButton onClick={onClick}>+</AddButton>;
 };
 
 export default Button;

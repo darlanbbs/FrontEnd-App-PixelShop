@@ -19,8 +19,7 @@ const CatalogPage = () => {
       .catch((error) => {
         console.error("Erro ao obter produtos:", error);
       });
-  }, [criarProduto]);
-  criarProduto("aaaaaaaa", 1, 1);
+  }, [products]);
 
   const handleDetalhesClick = (id: number) => {
     router.push(`/product/${id}`);
