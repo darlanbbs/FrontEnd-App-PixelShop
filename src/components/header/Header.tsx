@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
-import Button from "../Button/Button";
+import Button from "../Buttons/AddButton/Button";
 import { HeaderWrapper, Title } from "./styles";
 
 const Header = () => {
