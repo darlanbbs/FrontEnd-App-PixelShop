@@ -16,6 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   quantidade_estoque,
   descricao,
   onDetalhesClick,
+  onEditClick,
 }) => {
   return (
     <CardWrapper>
@@ -26,7 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       {descricao && <Description>{descricao}</Description>}
       <ButtonArea>
         <DefaultButton onClick={onDetalhesClick} title="Detalhes" />
-        <DefaultButton onClick={onDetalhesClick} title="Editar" />
+        <DefaultButton onClick={onEditClick} title="Editar" />
       </ButtonArea>
     </CardWrapper>
   );

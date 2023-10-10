@@ -5,8 +5,10 @@ import ProductCard from "./../cards/ProductCard";
 import { listarProdutos } from "@/db/db";
 import Header from "../header/Header";
 import { CatalogPageProps } from "../Interfaces/Interfaces";
+import { useRouter } from "next/navigation";
 
 const CatalogPage = () => {
+  const router = useRouter();
   const [products, setProducts] = useState<CatalogPageProps[]>([]);
 
   useEffect(() => {
@@ -20,7 +22,11 @@ const CatalogPage = () => {
   }, []);
   console.log(products);
   const handleDetalhesClick = (id: number) => {
-    alert(`Detalhes do Produto ${id}`);
+    router.push(`/product/${id}`);
+  };
+
+  const handleEditClick = (id: number) => {
+    console.log("Editar");
   };
 
   return (
@@ -35,6 +41,7 @@ const CatalogPage = () => {
               quantidade_estoque={product.quantidade_estoque}
               descricao={product.descricao}
               onDetalhesClick={() => handleDetalhesClick(product.id)}
+              onEditClick={() => handleEditClick(product.id)}
             />
           </Col>
         ))}
