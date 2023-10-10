@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Container } from "reactstrap";
 import Button from "../Buttons/AddButton/Button";

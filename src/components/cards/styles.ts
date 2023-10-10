@@ -6,7 +6,6 @@ export const CardWrapper = styled.div`
   border-radius: 8px;
   padding: 10px;
   margin: 10px;
-  max-width: 300px;
   position: relative;
 `;
 
@@ -52,5 +51,5 @@ export const ButtonArea = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 5px;
+  margin-top: 15px;
 `;
