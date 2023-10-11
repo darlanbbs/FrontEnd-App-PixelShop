@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { detalhesDoProduto } from "@/db/db";
 import DetailsCard from "@/components/cards/DetailsCard/DetailsCard";
+import ProductPageComponent from "@/components/ProductPageComponent/ProductPageComponent";
 
 const Page = ({ params }: { params: { id: number } }) => {
   const [product, setProduct] = useState<any>(null);
@@ -17,7 +18,7 @@ const Page = ({ params }: { params: { id: number } }) => {
   }, [params.id]);
 
   return (
-    <div>
+    <ProductPageComponent>
       {product && (
         <DetailsCard
           id={product.id}
@@ -27,7 +28,7 @@ const Page = ({ params }: { params: { id: number } }) => {
           quantidade_estoque={product.quantidade_estoque}
         />
       )}
-    </div>
+    </ProductPageComponent>
   );
 };
 

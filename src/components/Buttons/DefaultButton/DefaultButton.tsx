@@ -16,6 +16,7 @@ const DetailsButton = styled.button`
 
 const DefaultButton = ({ title, onClick, type }: props) => {
   return (
+    // @ts ignore
     <DetailsButton type={type} onClick={onClick}>
       {title}
     </DetailsButton>
