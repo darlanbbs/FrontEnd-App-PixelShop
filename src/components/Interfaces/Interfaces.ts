@@ -6,6 +6,7 @@ export interface Product {
 }
 
 export interface ProductCardProps extends Product {
+  id?: number;
   onDetalhesClick: () => void;
   onEditClick: () => void;
   onDeleteClick: () => void;
@@ -13,6 +14,7 @@ export interface ProductCardProps extends Product {
 
 export interface CatalogPageProps extends Product {
   id: number;
+  useContext: number;
   handleDetalhesClick: (id: number) => void;
   handleDeleteClick: (id: number) => void;
   handleEditClick: (id: number) => void;

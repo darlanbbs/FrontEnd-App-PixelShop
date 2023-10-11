@@ -9,6 +9,9 @@ export const listarProdutos = async () => {
   return api.get("/produto");
 };
 
+export const detalhesDoProduto = async (id: number) => {
+  return api.get(`produtos/${id}`);
+};
 export const criarProduto = async (
   nome: string,
   preco: number,
@@ -50,4 +53,23 @@ export const deletarProduto = async (id: number): Promise<void> => {
   }
 };
 
-export const editarProduto = async () => {};
+export const atualizarProduto = async (
+  id: number,
+  nome: string,
+  preco: number,
+  quantidade_estoque: number,
+  descricao: string
+) => {
+  try {
+    const response = await api.put(`/produto/${id}`, {
+      nome,
+      preco,
+      quantidade_estoque,
+      descricao,
+    });
+    return response.data;
+  } catch (error) {
+    console.error(`Erro ao atualizar produto ${id}:`, error);
+    throw error;
+  }
+};

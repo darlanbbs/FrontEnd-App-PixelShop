@@ -1,4 +1,3 @@
-import { deletarProduto } from "@/db/db";
 import DefaultButton from "../Buttons/DefaultButton/DefaultButton";
 import DeleteButton from "../Buttons/deleteButton/DeleteButton";
 import { ProductCardProps } from "../Interfaces/Interfaces";
@@ -10,6 +9,8 @@ import {
   Description,
   ButtonArea,
 } from "./styles";
+import ModalEditarProduto from "../Modals/ModalEditarProduto/ModalEditarProduto";
+import { useForm } from "./../context/ProductIdContext";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   nome,
@@ -19,6 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   onDetalhesClick,
   onEditClick,
   onDeleteClick,
+  id,
 }) => {
   return (
     <CardWrapper>
@@ -29,7 +31,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
       {descricao && <Description>{descricao}</Description>}
       <ButtonArea>
         <DefaultButton onClick={onDetalhesClick} title="Detalhes" />
-        <DefaultButton onClick={onEditClick} title="Editar" />
+        <ModalEditarProduto
+          onClick={onEditClick}
+          id={id}
+          descricao={descricao}
+          preco={preco}
+          nome={nome}
+          quantidade_estoque={quantidade_estoque}
+        />
       </ButtonArea>
     </CardWrapper>
   );
