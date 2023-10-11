@@ -1,6 +1,6 @@
 # FrontEnd-App-PixelShop
 
-Este é um projeto de frontend construído em NextJs + Typescript, que se conecta a um backend Node.js + PostgreSQL para gerenciar produtos. Abaixo estão as instruções detalhadas para executar o projeto.
+Este é um projeto de frontend construído em NextJs + Typescript com layout simples, que se conecta a um backend Node.js + PostgreSQL para gerenciar produtos. Abaixo estão as instruções detalhadas para executar o projeto.
 
 Instruções para Execução
 
@@ -52,4 +52,23 @@ Deletar
 
 Durante o desenvolvimento, uma das maiores dificuldades foi na manipulação dos dados entre o frontend e o backend, especialmente nas operações de atualização e criação de novos produto.<br>
 
-  
+# Layout Página vazia
+
+![Web1](https://github.com/darlanbbs/FrontEnd-App-PixelShop/blob/main/layout/pagina_vazia.png)
+
+# Layout página com produtos
+
+![Web1](https://github.com/darlanbbs/FrontEnd-App-PixelShop/blob/main/layout/pagina_produtos.png)
+
+# Layout Modal de criar produtos
+
+![Web1](https://github.com/darlanbbs/FrontEnd-App-PixelShop/blob/main/layout/criarProduto.png)
+
+# Layout Modal de editar produtos
+
+![Web1](https://github.com/darlanbbs/FrontEnd-App-PixelShop/blob/main/layout/editarProduto.png)
+
+# Layout modal página de detalhes do produto
+
+![Web1](https://github.com/darlanbbs/FrontEnd-App-PixelShop/blob/main/layout/paginaDetalhes.png)
+
