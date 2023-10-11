@@ -1,24 +1,34 @@
 "use client";
-import { CatalogPageProps } from "@/components/Interfaces/Interfaces";
-import { detalhesDoProduto } from "@/db/db";
 import React, { useState, useEffect } from "react";
-
-type Props = {};
+import { detalhesDoProduto } from "@/db/db";
+import DetailsCard from "@/components/cards/DetailsCard/DetailsCard";
 
 const Page = ({ params }: { params: { id: number } }) => {
-  const [products, setProducts] = useState<CatalogPageProps[]>([]);
+  const [product, setProduct] = useState<any>(null);
 
   useEffect(() => {
     detalhesDoProduto(params.id)
       .then((response) => {
-        setProducts(response.data);
+        setProduct(response.data);
       })
       .catch((error) => {
         console.error("Erro ao obter produtos:", error);
       });
-  }, [products]);
+  }, [params.id]);
 
-  return <div>My Post: {params.id}</div>;
+  return (
+    <div>
+      {product && (
+        <DetailsCard
+          id={product.id}
+          nome={product.nome}
+          descricao={product.descricao}
+          preco={product.preco}
+          quantidade_estoque={product.quantidade_estoque}
+        />
+      )}
+    </div>
+  );
 };
 
 export default Page;

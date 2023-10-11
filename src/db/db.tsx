@@ -10,7 +10,12 @@ export const listarProdutos = async () => {
 };
 
 export const detalhesDoProduto = async (id: number) => {
-  return api.get(`produtos/${id}`);
+  try {
+    return api.get(`produto/${id}`);
+  } catch (error) {
+    console.error(`Erro ao obter produto ${id}:`, error);
+    throw error;
+  }
 };
 export const criarProduto = async (
   nome: string,

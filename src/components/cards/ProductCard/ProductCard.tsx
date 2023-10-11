@@ -1,6 +1,6 @@
-import DefaultButton from "../Buttons/DefaultButton/DefaultButton";
-import DeleteButton from "../Buttons/deleteButton/DeleteButton";
-import { ProductCardProps } from "../Interfaces/Interfaces";
+import DefaultButton from "../../Buttons/DefaultButton/DefaultButton";
+import DeleteButton from "../../Buttons/deleteButton/DeleteButton";
+import { ProductCardProps } from "../../Interfaces/Interfaces";
 import {
   CardWrapper,
   Title,
@@ -9,7 +9,7 @@ import {
   Description,
   ButtonArea,
 } from "./styles";
-import ModalEditarProduto from "../Modals/ModalEditarProduto/ModalEditarProduto";
+import ModalEditarProduto from "../../Modals/ModalEditarProduto/ModalEditarProduto";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   nome,

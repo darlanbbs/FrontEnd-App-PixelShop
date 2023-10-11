@@ -1,7 +1,7 @@
 "use client";
 import { Container, Row, Col } from "reactstrap";
 import React, { useState, useEffect } from "react";
-import ProductCard from "./../cards/ProductCard";
+import ProductCard from "../cards/ProductCard/ProductCard";
 import { listarProdutos, deletarProduto, atualizarProduto } from "@/db/db";
 import Header from "../header/Header";
 import { CatalogPageProps } from "../Interfaces/Interfaces";
