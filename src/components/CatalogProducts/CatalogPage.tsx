@@ -12,7 +12,7 @@ const CatalogPage = () => {
   const [products, setProducts] = useState<CatalogPageProps[]>([]);
 
   const handleDetalhesClick = (id: number) => {
-    router.push(`/product/${id}`);
+    router.push(`/produto/${id}`);
   };
 
   const handleEditClick = (
