@@ -2,11 +2,11 @@ export interface Product {
   nome: string;
   preco: number;
   quantidade_estoque: number;
-  descricao?: string;
+  descricao: string;
 }
 
 export interface ProductCardProps extends Product {
-  id?: number;
+  id: number;
   onDetalhesClick: () => void;
   onEditClick: () => void;
   onDeleteClick: () => void;

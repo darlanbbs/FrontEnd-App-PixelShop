@@ -30,10 +30,11 @@ function ModalEditarProduto({
 }: Props) {
   const [modal, setModal] = useState(false);
   const [editNome, setEditNome] = useState(nome || "");
-  const [editPreco, setEditPreco] = useState(preco);
+  const [editPreco, setEditPreco] = useState<number>(preco || 0);
+  const [editQuantidadeEstoque, setEditQuantidadeEstoque] = useState<number>(
+    quantidade_estoque || 0
+  );
   const [editDescricao, setEditDescricao] = useState(descricao || "");
-  const [editQuantidadeEstoque, setEditQuantidadeEstoque] =
-    useState(quantidade_estoque);
 
   const toggle = () => setModal(!modal);
 
@@ -81,6 +82,7 @@ function ModalEditarProduto({
                 name="preco"
                 id="preco"
                 value={editPreco}
+                //@ts-ignore
                 onChange={(e) => setEditPreco(e.target.value)}
               />
             </FormGroup>
@@ -91,6 +93,7 @@ function ModalEditarProduto({
                 name="quantidadeEstoque"
                 id="quantidadeEstoque"
                 value={editQuantidadeEstoque}
+                //@ts-ignore
                 onChange={(e) => setEditQuantidadeEstoque(e.target.value)}
               />
             </FormGroup>

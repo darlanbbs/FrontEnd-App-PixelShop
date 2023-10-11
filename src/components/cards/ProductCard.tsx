@@ -10,7 +10,6 @@ import {
   ButtonArea,
 } from "./styles";
 import ModalEditarProduto from "../Modals/ModalEditarProduto/ModalEditarProduto";
-import { useForm } from "./../context/ProductIdContext";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   nome,
